@@ -393,7 +393,7 @@ export default function CountryDetail({
       opacity: 1, 
       y: 0,
       transition: {
-        type: 'spring',
+        type: 'spring' as const,
         stiffness: 120,
         damping: 14
       }
@@ -744,7 +744,7 @@ export default function CountryDetail({
                   Book Slot
                 </button>
                 <a
-                  href={`https://wa.me/923001234567?text=Assalam-o-Alaikum, I need instant assistance regarding my ${country.name} Visa workflow list.`}
+                  href={`https://wa.me/923404872390?text=Assalam-o-Alaikum, I need instant assistance regarding my ${country.name} Visa workflow list.`}
                   target="_blank"
                   rel="noreferrer"
                   className="bg-emerald-600 hover:bg-emerald-700 text-white font-extrabold text-xs py-2.5 px-3 rounded-xl text-center transition flex justify-center items-center gap-1.5 active:scale-95"
@@ -2117,7 +2117,7 @@ export default function CountryDetail({
               </div>
 
               <a
-                href={`https://wa.me/923001234567?text=Hi, I am looking for details regarding ${country.name} visa processing steps.`}
+                href={`https://wa.me/923404872390?text=Hi, I am looking for details regarding ${country.name} visa processing steps.`}
                 target="_blank"
                 rel="noreferrer"
                 className="w-full py-3 bg-emerald-600 hover:bg-emerald-700 active:scale-95 rounded-xl text-white font-black text-xs text-center flex items-center justify-center gap-2 shadow transition cursor-pointer select-none"

@@ -509,7 +509,7 @@ export default function Header({
               <ArrowRight className="w-4 h-4" />
             </button>
             <a 
-              href="https://wa.me/923001234567" 
+              href="https://wa.me/923404872390" 
               target="_blank" 
               rel="noreferrer" 
               className="bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs px-5 py-3 rounded-xl flex items-center gap-2 transform active:scale-95 transition"
@@ -774,7 +774,7 @@ export default function Header({
         </div>
 
         <a 
-          href="https://wa.me/923001234567"
+          href="https://wa.me/923404872390"
           target="_blank"
           rel="noreferrer"
           className="bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs sm:text-sm px-6 py-4 rounded-2xl flex items-center gap-2 transform hover:scale-105 active:scale-95 transition shadow-lg shrink-0"
@@ -1334,7 +1334,7 @@ export default function Header({
           <h2 className="text-xl sm:text-3xl font-black text-white">Need Live Consular Support?</h2>
           <p className="text-xs text-slate-450 max-w-xl mx-auto">Our physical team supports metrical document attestation queues and GAMCA diagnostic portal pre-verification directly from Lahore, Rawalpindi, and Karachi.</p>
           <a 
-            href="https://wa.me/923001234567"
+            href="https://wa.me/923404872390"
             target="_blank"
             rel="noreferrer"
             className="inline-flex items-center gap-2 bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs px-6 py-3.5 rounded-2xl transform hover:scale-105 transition shadow-lg"
@@ -1461,7 +1461,7 @@ export default function Header({
             <p className="text-xs text-slate-400 max-w-xl">Our raw video walkthrough sheets have helped over 32k Pakistani workers clear their medical examinations on first attempts. Text support specs now.</p>
           </div>
           <a
-            href="https://wa.me/923001234567"
+            href="https://wa.me/923404872390"
             target="_blank"
             rel="noreferrer"
             className="bg-emerald-500 hover:bg-emerald-600 text-white font-black text-xs px-6 py-4 rounded-xl flex items-center gap-2 transform hover:scale-105 active:scale-95 transition"
@@ -1484,12 +1484,12 @@ export default function Header({
           <div className="flex flex-wrap justify-center sm:justify-start items-center gap-4 text-[11px] sm:text-xs text-slate-300">
             <span className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer">
               <Mail className="w-3.5 h-3.5 text-amber-500" />
-              support@zeevisa.com
+              gulfjobs300@gmail.com
             </span>
             <span className="h-3 w-px bg-slate-700 hidden xxs:block" />
             <span className="flex items-center gap-1.5 hover:text-white transition-colors cursor-pointer">
               <Phone className="w-3.5 h-3.5 text-amber-500" />
-              +92 300 1234567
+              +92 340 4872390 / +92 300 5408167
             </span>
             <span className="h-3 w-px bg-slate-700 hidden sm:block" />
             <span className="font-medium text-amber-400 font-heading hidden lg:block animate-pulse">
@@ -1668,7 +1668,7 @@ export default function Header({
 
             {/* WhatsApp Quick chat */}
             <a 
-              href="https://wa.me/923001234567" 
+              href="https://wa.me/923404872390" 
               target="_blank" 
               rel="noreferrer"
               className="bg-emerald-500 hover:bg-emerald-600 text-white font-bold text-xs py-2.5 px-3.5 rounded-lg flex items-center gap-1.5 shadow-md transition-transform hover:scale-105"
@@ -1779,7 +1779,7 @@ export default function Header({
                 </button>
 
                 <a 
-                  href="https://wa.me/923001234567" 
+                  href="https://wa.me/923404872390" 
                   target="_blank" 
                   rel="noreferrer"
                   className="w-full py-3 bg-emerald-500 hover:bg-emerald-600 text-white rounded-lg font-bold text-center flex items-center justify-center gap-2 shadow-lg"

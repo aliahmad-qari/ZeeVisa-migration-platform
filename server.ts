@@ -116,14 +116,35 @@ Tone instructions:
   // Vite middleware or static client assets serving based on mode
   if (process.env.NODE_ENV !== "production") {
     const vite = await createViteServer({
+      configFile: path.resolve(process.cwd(), 'vite.config.ts'),
       server: { middlewareMode: true },
       appType: "spa",
     });
     app.use(vite.middlewares);
   } else {
+    // Production: serve pre-built static files
     const distPath = path.join(process.cwd(), 'dist');
-    app.use(express.static(distPath));
+    
+    // Serve static files with proper MIME types
+    app.use(express.static(distPath, {
+      maxAge: '1d',
+      etag: false,
+      setHeaders: (res, filePath) => {
+        // Set proper MIME type for JS files
+        if (filePath.endsWith('.js')) {
+          res.setHeader('Content-Type', 'application/javascript');
+        } else if (filePath.endsWith('.css')) {
+          res.setHeader('Content-Type', 'text/css');
+        }
+      }
+    }));
+    
+    // SPA fallback: serve index.html for all non-api routes
     app.get('*', (req, res) => {
+      // Don't redirect API routes
+      if (req.path.startsWith('/api')) {
+        return res.status(404).json({ error: 'API endpoint not found' });
+      }
       res.sendFile(path.join(distPath, 'index.html'));
     });
   }

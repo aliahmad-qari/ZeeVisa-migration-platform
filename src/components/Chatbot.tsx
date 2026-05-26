@@ -55,7 +55,7 @@ export default function Chatbot() {
     try {
       // Build a minimalist history formatted for ZeeBot
       const historyPayload = messages.map(msg => ({
-        role: msg.roleItem || msg.role,
+        role: (msg as any).roleItem || msg.role,
         text: msg.text
       }));
 
@@ -279,7 +279,7 @@ export default function Chatbot() {
             className="absolute inset-0 bg-emerald-500 rounded-full pointer-events-none z-[-1]"
           />
           <motion.a
-            href="https://wa.me/923001234567"
+            href="https://wa.me/923404872390"
             target="_blank"
             rel="noreferrer"
             whileHover={{ scale: 1.08 }}

@@ -126,17 +126,17 @@ export default function Footer({ onSelectCountry, setActiveSection }: FooterProp
             </li>
             <li className="flex gap-2.5 items-center">
               <Phone className="w-4 h-4 text-emerald-500 flex-shrink-0" />
-              <span>+92 300 1234567</span>
+              <span>+92 340 4872390 / +92 300 5408167</span>
             </li>
             <li className="flex gap-2.5 items-center">
               <Mail className="w-4 h-4 text-sky-500 flex-shrink-0" />
-              <span>support@zeevisa.com</span>
+              <span>gulfjobs300@gmail.com</span>
             </li>
           </ul>
 
           <div className="pt-3 border-t border-slate-800">
             <a 
-              href="https://wa.me/923001234567" 
+              href="https://wa.me/923404872390" 
               target="_blank" 
               rel="noreferrer"
               className="px-3.5 py-2 bg-emerald-600 hover:bg-emerald-700 text-white font-bold rounded-lg flex items-center justify-center gap-1.5 transition text-center shadow"
