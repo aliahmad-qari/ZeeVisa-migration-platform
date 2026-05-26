@@ -1,0 +1,6 @@
+{
+  "name": "ZeeVisa Global",
+  "description": "Your complete Gulf Visa & Migration Guidance Platform. Access comprehensive visa guides, step-by-step processing roadmaps, job opportunities, salary details, and translation services.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
