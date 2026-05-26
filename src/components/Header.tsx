@@ -43,7 +43,7 @@ import {
   HeartPulse
 } from 'lucide-react';
 import { GULF_COUNTRIES } from '../data';
-import LogoImage from '../assets/images/logo.png';
+import LogoImage from '../assets/images/logo.jpeg';
 
 interface HeaderProps {
   currentCountryId: string | null;
