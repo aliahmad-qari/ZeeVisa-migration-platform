@@ -37,9 +37,11 @@ import {
   BookOpen,
   DollarSign,
   Activity,
-  UserCheck
+  UserCheck,
+  ExternalLink
 } from 'lucide-react';
 import { CountryData, VisaCategory } from '../types';
+import { COUNTRY_OFFICIAL_SERVICES } from '../data';
 import { motion, AnimatePresence } from 'motion/react';
 import { jsPDF } from 'jspdf';
 import { BarChart, Bar, XAxis, YAxis, Tooltip, ResponsiveContainer, Cell } from 'recharts';
@@ -315,7 +317,7 @@ export default function CountryDetail({
   onDownloadGuide
 }: CountryDetailProps) {
   
-  const [activeTab, setActiveTab] = useState<'overview' | 'visas' | 'process' | 'medical' | 'life' | 'documents' | 'faqs'>('overview');
+  const [activeTab, setActiveTab] = useState<'overview' | 'visas' | 'process' | 'medical' | 'govtools' | 'life' | 'documents' | 'faqs'>('overview');
   const [selectedVisaIndex, setSelectedVisaIndex] = useState<number>(0);
   const [expandedStep, setExpandedStep] = useState<number>(1);
   const [lifeSubTab, setLifeSubTab] = useState<'driving' | 'housing' | 'sim' | 'banking' | 'culture'>('driving');
@@ -765,6 +767,7 @@ export default function CountryDetail({
             { id: 'visas', label: 'Visa Categories' },
             { id: 'process', label: 'Immigration Steps (7 Steps)' },
             { id: 'medical', label: 'GAMCA Medical & Bio' },
+            { id: 'govtools', label: 'Official Gov Tools' },
             { id: 'life', label: 'Driving & Life' },
             { id: 'documents', label: 'Checking List' },
             { id: 'faqs', label: 'FAQs' }
@@ -1613,6 +1616,69 @@ export default function CountryDetail({
                     ))}
                   </div>
                 </div>
+
+              </div>
+            )}
+
+            {/* TAB D.5: OFFICIAL GOVERNMENT TOOLS & SERVICES */}
+            {activeTab === 'govtools' && (
+              <div className="space-y-6 animate-fadeIn">
+                <div className="border-b border-slate-800 pb-4">
+                  <h3 className="text-xl sm:text-2xl font-black text-slate-100 flex items-center gap-2">
+                    <Building className="text-amber-500 w-6 h-6" />
+                    <span>Official Government Tools & Services</span>
+                  </h3>
+                  <p className="text-xs text-slate-400 mt-2">
+                    Access official government portals and services for {country.name}. All links open official government websites.
+                  </p>
+                </div>
+
+                {/* Check if services exist for this country */}
+                {COUNTRY_OFFICIAL_SERVICES[country.id] && COUNTRY_OFFICIAL_SERVICES[country.id].length > 0 ? (
+                  <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
+                    {COUNTRY_OFFICIAL_SERVICES[country.id].map((service, idx) => (
+                      <motion.a
+                        key={idx}
+                        href={service.url}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        variants={itemVariants}
+                        className="group relative bg-slate-900/50 border border-slate-800 rounded-2xl p-5 hover:border-amber-500/50 hover:shadow-lg hover:shadow-amber-500/10 hover:-translate-y-1 transition-all duration-300 cursor-pointer"
+                      >
+                        {/* Official Government Portal Badge */}
+                        <div className="absolute -top-2 -right-2 bg-amber-500 text-slate-950 text-[9px] font-black px-2 py-1 rounded-lg shadow-lg">
+                          OFFICIAL
+                        </div>
+
+                        {/* Service Name */}
+                        <div className="flex items-start justify-between gap-3 mb-3">
+                          <h4 className="text-sm font-bold text-slate-100 leading-snug group-hover:text-amber-400 transition-colors">
+                            {service.name}
+                          </h4>
+                          <ExternalLink className="w-4 h-4 text-slate-500 group-hover:text-amber-500 transition-colors shrink-0" />
+                        </div>
+
+                        {/* Helper Text */}
+                        <p className="text-xs text-slate-400 font-sans leading-relaxed">
+                          Open official government service
+                        </p>
+
+                        {/* Hover Glow Effect */}
+                        <div className="absolute inset-0 rounded-2xl bg-gradient-to-br from-amber-500/0 to-amber-500/0 group-hover:from-amber-500/5 group-hover:to-transparent transition-all duration-300 pointer-events-none" />
+                      </motion.a>
+                    ))}
+                  </div>
+                ) : (
+                  <div className="text-center py-12 bg-slate-900/30 border border-slate-850 rounded-2xl">
+                    <Info className="w-12 h-12 text-slate-600 mx-auto mb-4" />
+                    <p className="text-sm text-slate-400 font-medium">
+                      Official government services for {country.name} will be added soon.
+                    </p>
+                    <p className="text-xs text-slate-500 mt-2">
+                      Check back later for updates or contact support for assistance.
+                    </p>
+                  </div>
+                )}
 
               </div>
             )}
